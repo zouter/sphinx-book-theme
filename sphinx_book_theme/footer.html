@@ -1,16 +1,16 @@
 <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
-        {% if author %}
+        <!-- {% if author %}
           {{ translate('By') }} {{ author }}<br/>
         {% endif %}
-        {%- if show_copyright %}
-          {%- if hasdoc('copyright') %}
+        {%- if show_copyright %} -->
+          <!-- {%- if hasdoc('copyright') %}
             {% trans prefix=translate('Copyright'), path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">{{ prefix }}</a> {{ copyright }}.{% endtrans %}<br/>
           {%- else %}
             {% trans prefix=translate('Copyright'), copyright=copyright|e %}&copy; {{ prefix }} {{ copyright }}.{% endtrans %}<br/>
           {%- endif %}
-        {%- endif %}
+        {%- endif %} -->
         {%- if last_updated %}
           {% trans prefix=translate('Last updated on'), last_updated=last_updated|e %}{{ prefix }} {{ last_updated }}.{% endtrans %}<br/>
         {%- endif %}
