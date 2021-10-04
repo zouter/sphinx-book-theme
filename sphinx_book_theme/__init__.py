@@ -9,7 +9,7 @@ except ImportError:
     import importlib_resources as resources
 
 from bs4 import BeautifulSoup as bs
-from docutils.parsers.rst import directives
+from docutils.parsers.rst.directives.body import Sidebar
 from docutils import nodes
 from sphinx.application import Sphinx
 from sphinx.locale import get_translation
@@ -18,7 +18,7 @@ from sphinx.util import logging
 from .launch import add_hub_urls
 from . import static as theme_static
 
-__version__ = "0.1.3"
+__version__ = "0.1.5"
 """sphinx-book-theme version"""
 
 SPHINX_LOGGER = logging.getLogger(__name__)
@@ -254,7 +254,7 @@ def _string_or_bool(var):
         return var is None
 
 
-class Margin(directives.body.Sidebar):
+class Margin(Sidebar):
     """Goes in the margin to the right of the page."""
 
     optional_arguments = 1
